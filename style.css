@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+:root{
+    --background-color1: #424242;
+    --background-color2: black;
+    --text-color: #eeeeee;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header and navbar */
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 150px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .page_logo{
+    font-family: 'Sigmar', cursive;
+    font-size: 35px;
+}
+
+.navbar .page_logo a{
+    color: rgb(252, 40, 40);
+    text-shadow: 2px 2px 5px var(--background-color1);
+}
+
+.navbar .menu a{
+    margin-right: 28px;
+    padding: 5px;
+    color: var(--text-color);
+    transition: 0.5s;
+}
+
+.navbar .menu a:focus{
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--background-color1);
+}
+
+.navbar .menu .home{
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--background-color1);
+}
+
+.navbar .register a{
+    margin-right: 28px;
+    padding: 5px;
+    color: var(--text-color);
+    transition: 0.3s;
+}
+
+.navbar .register a:hover{
+    color: red;
+}
+
+.navbar .register i{
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+/* container_1 */
+
+.container_1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-items: center;
+}
+
+.container_1::before{
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url(./Image/Martian\ Landscape\ _\ Bytescapes.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.container_1 .cover{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    height: 65vh;
+}
+
+.container_1 .profile{
+    width: 290px;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.container_1 .cover .about{
+    max-width: 500px;
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px var(--background-color2);
+    padding: 15px;
+}
+
+.cover .about h1{
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.cover .about h3{
+    font-weight: 200;
+}
+
+.cover .about .time{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.cover .about .text{
+    font-weight: 300;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.cover .about .btn{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 450px;
+}
+
+.about .btn button{
+    width: 210px;
+    height: 40px;
+    margin: 20px 3px auto 3px;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--background-color1);
+    color: var(--text-color);
+    transition: 0.5s;
+    cursor: pointer;
+    /* box-shadow: 1px 1px 2px var(--background-color2); */
+}
+
+.about .btn button:focus{
+    background-color: rgb(211, 39, 39);
+}
+
+.btn button:hover{
+    transform: scale(1.05);
+}
+
+.about .btn .watch{
+    background-color: rgb(211, 39, 39);
+}
+
+.container_1 .display{
+    margin: auto;
+}
+
+.container_1 .display h6{
+    font-size: medium;
+    max-width: 960px;
+    margin: auto;
+    padding: 8px;
+    color: black;
+    background-color: var(--background-color1);
+}
+
+.container_1 .display .list{
+    max-width: 960px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.list img{
+    width: 150px;
+    height: 80px;
+    object-fit: cover;
+    margin: 5px;
+    gap: 1.2rem;
+    border-radius: 0.5rem;
+    filter: brightness(0.5);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.list img:hover{
+    transform: scale(1.1);
+}
+
+.list img:focus{
+    border-bottom: 5px solid rgb(211, 39, 39);
+    filter: brightness(1);
+}
+
+.list .arrive{
+    border-bottom: 5px solid rgb(211, 39, 39);
+    filter: brightness(1);
+}
+
+/* container_2 */
+
+.container_2{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    /* padding: 5px auto 25px 150px; */
+    padding-top: 5px;
+    padding-right: 150px;
+    padding-bottom: 11px;
+    padding-left: 150px;
+    width: 100%;
+    height: 40px;
+    background-color: var(--background-color1);
+}
+
+.header .left a{
+    margin-right: 35px;
+    color: var(--text-color);
+    transition: 0.3s;
+    position: relative;
+}
+
+.header .left a::after{
+    content: " ";
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.header .left a:focus::after{
+    width: 100%;
+}
+
+.header .left .reach::after{
+    content: " ";
+    width: 100%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.header .right a{
+    color: var(--text-color);
+}
+
+.header .right a:focus{
+    color: red;
+}
+
+/* part2 */
+
+.part2{
+    width: 100%;
+    background-color: var(--background-color2);
+    color: var(--text-color);
+    padding: 25px;
+}
+
+.part2 .head{
+    max-width: 1100px;
+    margin: 0px auto 0px 100px;
+}
+
+.part2 .main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main .poster{
+    width: 200px;
+    height: 330px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.poster .box img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.poster .box img:hover{
+    transform: scale(1.1);
+}
+
+.poster span{
+    font-size: 18px;
+    font-weight: 200px;
+}
+
+.main .left_arrow, .main .right_arrow {
+    font-size: 50px;
+    padding: 10px;
+    line-height: 270px;
+    color: var(--background-color1);
+}
+
+.main .left_arrow:hover, .main .right_arrow:hover{
+    color: white;
+}
+
+/* third container */
+
+.container_3{
+    width: 100%;
+    background-color: var(--background-color1);
+    color: var(--text-color);
+    position: relative;
+}
+
+.container_3 .boxes{
+    margin: auto;
+    width: 100%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+    gap: 2rem;
+}
+
+.container_3 .boxes .box{
+    margin-top: 10px;
+    max-width: 200px;
+    height: 330px;
+}
+
+.box .image img{
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.box .image img:hover{
+    transform: scale(1.1);
+}
+
+.box span{
+    font-size: 18px;
+    font-weight: 200px;
+}
+
+/* footer */
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 100px;
+    gap: 0.6rem;
+}
+
+.footer .circle{
+    border: 1.5px solid var(--text-color);
+    background-color: var(--background-color1);
+    color: var(--text-color);
+    border-radius: 2rem;
+    font-size: 18px;
+    padding: 5px 10px 5px 10px;
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+.footer .circle:focus{
+    background-color: rgb(211, 39, 39);
+}
+
+.footer .circle:hover{
+    background-color: rgb(211, 39, 39);
+}
+
+.footer .dot{
+    border: none;
+    background-color: var(--background-color1);
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.footer .rectangle{
+    border: 1.5px solid var(--text-color);
+    background-color: var(--background-color1);
+    color: var(--text-color);
+    border-radius: 0.5rem;
+    font-size: 18px;
+    padding: 8px 11px 8px 11px;
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+.footer .rectangle:focus{
+    background-color: rgb(211, 39, 39);
+}
+
+.footer .rectangle:hover{
+    background-color: rgb(211, 39, 39);
+}
+
+/* responsive website  */
+
+@media (max-width:1200px) {
+    .container_2 .header .left{
+        display: none;
+    }
+    .container_2 .header{
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .container_2 .part2 .head{
+        display: none;
+    }
+}
+
+@media (max-width:1189px) {
+    .container_2 .part2 .main .left_arrow i,
+    .container_2 .part2 .main .right_arrow i{
+        display: none;
+    }
+}
+
+@media (max-width:1080px) {
+    .navbar .menu{
+        display: none;
+    }
+    .navbar{
+        padding: 10px 30px;
+    }
+    .navbar .register a{
+        margin-right: 8px;
+    }
+}
+
+@media (max-width:900px) {
+    .container_1 .cover{
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
+    }
+    .about h1{
+        font-size: 28px;
+        margin-bottom: 5px;
+    }
+    .about h5, .about h3{
+        display: none;
+    }
+    .cover .about .btn{
+        width: 320px;
+        align-items: start;
+        justify-content: start;
+    }
+    .about .btn button{
+        width: 150px;
+        margin: 0px 3px;
+    }
+    .container_1 .display{
+        padding: 3rem;
+    }
+}
+
+@media (max-width:703px) {
+    .cover .about h1{
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+    .cover .about .btn{
+        width: 220px;
+    }
+    .about .btn button{
+        width: 100px;
+    }
+}
+
+@media (max-width:580px) {
+    .container_1 .display .list .arrive{
+        display: none;
+    }
+    .navbar .register{
+        display: none;
+    }
+}
+
+@media (max-width:540px) {
+    .container_1 .cover{
+        padding-top: 40px;
+    }
+}
+
+@media (max-width:800px) {
+    .container_2 .header{
+        justify-content: end;
+        padding-right: 20px;
+    }
+    .container_3 .footer{
+        gap: 0.4rem;
+    }
+    .container_3 .footer button{
+        padding: 2px 5px 2px 5px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:500px) {
+    .navbar{
+        flex-direction: column;
+        align-items: start;
+    }
+    .container_1{
+        height: 70vh;
+    }
+    .container_1::before{
+        height: 70%;
+    }
+    .container_1 .cover{
+        margin-bottom: 10px;
+    }
+    .container_1 .cover img{
+        width: 220px;
+        height: 320px;
+        margin-top: 50px;
+        padding: 0;
+    }
+    .container_1 .cover .about{
+        width: 200px;
+    }
+    .container_1 .cover .about .btn{
+        width: 200px;
+    }
+    .container_1 .about .btn button{
+        width: 90px;
+    }
+    .container_1 .display{
+        display: none;  
+    }
+}
+
+@media (max-width:380px) {
+    .container_1 .cover{
+        padding-top: 5px;
+    }
+    .container_3 .footer{
+        gap: 0.25rem;
+    }
+    .container_3 .footer button{
+        padding: 2px 5px 2px 5px;
+        font-size: 12px;
+    }
+}
